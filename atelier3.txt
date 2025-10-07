@@ -11,35 +11,10 @@ Donc, ce qu'il faudrait par exemple taper serait ici :
 2) Résoudre ce problème :
 https://www.hackerrank.com/challenges/lonely-integer-2/problem
 
-Avec l'aide des commentaires on peut en arriver a cette proposition. 
-s
-
-read N
+#!/bin/bash
+read n
 read -a arr
-found=0
-while [[ ${#arr[@]} -gt 1 ]]; do
-    idx=()
-    for i in ${!arr[@]}; do
-        idx+=("$i")
-    done
-    check=${arr[${idx[$found]}]}
-    count=0
-    for i in ${!arr[@]}; do
-        if [[ "${arr[$i]}" -eq "$check" ]]; then
-            ((count++))
-        fi
-    done
-    if [[ $count -eq 2 ]]; then
-        for i in ${!arr[@]}; do
-            if [[ "${arr[$i]}" -eq "$check" ]]; then
-                unset arr[$i]
-            fi
-        done
-    else
-        ((found++))
-    fi
-done
-echo "${arr[@]}"
+printf "%s\n" "${arr[@]}" | sort -n | uniq -u
 
 
 3) Ecrire un script qui génère la sortie suivante :
