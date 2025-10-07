@@ -1,1 +1,48 @@
-"Atelier1"
+Atelier 1
+
+1) Obtenir la documentation d e la c o m m a n d e l s
+man ls
+
+2) Afficher le c h e m i n d u répertoire e n cours
+pwd
+
+3) Afficher la liste des fichiers dans le répertoire en cours
+ls
+
+4) Changer de répertoire pour la racine du système de fichier (ou du disque principal)
+cd 
+
+5) Afficher les fichiers e t le détail d e s droits 
+ls -l
+
+6) Afficher s o n n o m d'utilisateur 
+whoami	
+
+7) Afficher l'historique d e s c o m m a n d e s r é c e n t e s
+history
+
+8) R é e x é c u t e r la c o m m a n d e 5) s a n s la t a p e r 
+!5
+
+9 ) A f f i c h e r l e c o n t e n u d ' u n f i c h i e r t e x t e
+cat x.txt
+
+10) Lancer firefox (ou n'importe quel navigateur)
+open -a "Firefox" 
+
+11) Créer un répertoire puis créer un fichier d a n s c e répertoire (sans utiliser cd)
+mkdir dossier
+touch fichier
+
+12) Supprimer le répertoire créé en 11)
+rmdir : si vide
+rm -r : nomdossier si pas vide
+
+13) Explorer l'utilisation d e la t o u c h e Ta b e t d e s flèches directionnelles 
+tab sert a compléter automatiquement , flèches haut/bas = navigation dans l'historique. Flèches latérales -> bouger le curseur de saisie.
+
+
+14) Explorer les raccourcis c o m m e Ctrl+A, C t r l + L o u C t r l + E
+Ctrl+A -> Aller au début de la ligne
+Ctrl+E -> Aller à la fin de la ligne
+Ctrl+L -> Clear
