@@ -1,1 +1,47 @@
-"Atelier 2"
+Atelier 2
+
+1) Récupérer l'archive suivante https://www.outofpluto.com/media/uploads/formation/shell/intro-shell.zip
+curl -LO https://www.outofpluto.com/media/uploads/formation/shell/intro-shell.zip
+
+2) Désarchiver le fichier
+unzip intro-shell.zip
+
+3) Changer de répertoire pour le répertoire désarchivé
+cd intro-shell
+
+4) Concaténer tous les fichiers .txt dans all. t x t
+cat *.txt > all.txt
+
+5) Afficher le nom de tous les fichiers qui contiennent le mot Hello
+grep -l "Hello" *.txt
+
+6) Afficher le n o m b r e d e fichiers c o n t e n a n t le m o t H e l l o
+grep -l "Hello" *.txt | wc -l
+
+7) Afficher le résultat de la commande python credits sans fichier
+python3 puis credits
+
+8) Trouver le nombre total de lignes de code dans tous les .py d'un répertoire (sans compter les lignes vides)
+grep -v '^$' *.py | wc -l
+
+9) Afficher toutes les lignes d'un fichier qui apparaissent en double
+sort all.txt | uniq -d
+
+10) Afficher u n i q u e m e n t les p e r m i s s i o n s e t n o m s d e s fichiers d ' u n d o s s i e r
+ls -l | awk '{print $1, $9}'
+
+11) Afficher le chemin absolu d e s 10 fichiers les plus gros d a n s un dossier et s e s sous-dossiers
+find . -type f -exec du -h {} + | sort -rh | head -n 10
+
+12) Afficher les lignes communes à deux fichiers
+comm -12 < (sort fichier1) <(sort fichier2)
+
+13) Afficher tous les fichiers exécutables dans le répertoire courant
+find . -maxdepth 1 -type f -executable
+
+14) C o m p t e r c o m b i e n d e fichiers s o n t vides d a n s u n dossier e t s e s sous-dossiers
+find . -type f -empty | wc -l
+
+15) Lister tous les fichiers qui ont été modifiés dans les 24 dernières heure
+find . -type f -mtime -1
+
